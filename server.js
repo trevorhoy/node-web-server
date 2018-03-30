@@ -54,6 +54,13 @@ app.get('/about', (req, res) => {
   })
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'My Projects',
+    welcomeMessage: 'Here is a list of my projects'
+  })
+})
+
 app.get('/bad', (req, res) => {
   res.send({
     error: 'Not able to find page.'
